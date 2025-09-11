@@ -25,18 +25,20 @@
     </ul>
 
     <!-- Hamburger -->
-    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">&#9776;</button>
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none p-2">
+      &#9776;
+    </button>
   </div>
 </nav>
 
 <!-- Dropdown menu (HP) -->
-<div id="menu" class="hidden bg-gray-800 text-white p-4 space-y-2 md:hidden">
-  <a href="#hero" class="hover:text-pink-400">Home</a>
-  <a href="#about" class="hover:text-pink-400">Tentang</a>
-  <a href="#skills" class="hover:text-pink-400">Skill</a>
-  <a href="#portofolio" class="hover:text-pink-400">Portofolio</a>
-  <a href="tugas.html" class="hover:text-pink-400">Tugas</a>
-  <a href="#contact" class="hover:text-pink-400">Kontak</a>
+<div id="menu" class="hidden absolute top-16 left-0 w-full bg-gray-800 text-white p-4 space-y-2 md:hidden z-40">
+  <a href="#hero" class="block hover:text-pink-400">Home</a>
+  <a href="#about" class="block hover:text-pink-400">Tentang</a>
+  <a href="#skills" class="block hover:text-pink-400">Skill</a>
+  <a href="#portofolio" class="block hover:text-pink-400">Portofolio</a>
+  <a href="tugas.html" class="block hover:text-pink-400">Tugas</a>
+  <a href="#contact" class="block hover:text-pink-400">Kontak</a>
 </div>
 
 <main class="max-w-6xl mx-auto p-6 pt-24">
@@ -240,10 +242,12 @@
       </form>
       <p class="mt-4">Email: <a href="mailto:ristadwipurn@gmail.com" class="text-cyan-300">ristadwipurn@gmail.com</a></p>
       <div class="mt-4 space-x-3">
-        <a href="https://github.com/KadekRistaDwipurnamii" target="_blank" class="bg-pink-600 px-3 py-1 rounded-full">GitHub</a>
-        <a href="https://www.instagram.com/sluckygurl/" target="_blank" class="bg-pink-600 px-3 py-1 rounded-full">Instagram</a>
-        <a href="https://www.linkedin.com/in/ristadwipurn/" target="_blank" class="bg-pink-600 px-3 py-1 rounded-full">LinkedIn</a>
-        <a href="https://wa.me/6289508685114" target="_blank" class="bg-pink-600 px-3 py-1 rounded-full">WhatsApp</a>
+      <div class="mt-4 flex space-x-4 justify-center md:justify-start text-2xl">
+        <a href="https://github.com/KadekRistaDwipurnamii" target="_blank" class="hover:text-pink-400"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/sluckygurl/" target="_blank" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/ristadwipurn/" target="_blank" class="hover:text-pink-400"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/6289508685114" target="_blank" class="hover:text-pink-400"><i class="fab fa-whatsapp"></i></a>
+      </div>
       </div>
     </section>
   </main>
@@ -253,10 +257,14 @@
   </footer>
 
   <script>
-    // hamburger menu
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("menu");
-    btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
 
     // dynamic hero text
     const roles = ["Computer Science Student", "Web Developer", "UI/UX Designer"];
@@ -269,6 +277,7 @@
     changeText();
     setInterval(changeText, 2000);
   </script>
+  
 
 </body>
 </html>
