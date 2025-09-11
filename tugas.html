@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Tugas Bangun Datar</title>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-pink-800 text-white">
+
+<!-- ========== NAVBAR ========== -->
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+  <!-- Logo -->
+  <div class="text-xl font-bold">⚡ Portofolio</div>
+
+  <!-- Menu (desktop, default muncul kalau layar md ke atas) -->
+  <ul class="hidden md:flex space-x-8">
+    <li><a href="beranda.html" class="hover:text-pink-400">Beranda</a></li>
+    <li><a href="index.html#about" class="hover:text-pink-400">Tentang</a></li>
+    <li><a href="indek.html#skills" class="hover:text-pink-400">Skill</a></li>
+    <li><a href="index.html#portofolio" class="hover:text-pink-400">Portofolio</a></li>
+    <li><a href="tugas.html" class="hover:text-pink-400">Tugas</a></li>
+    <li><a href="index.html#contact" class="hover:text-pink-400">Kontak</a></li>
+  </ul>
+
+  <!-- Tombol hamburger (hanya muncul di HP) -->
+  <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+    &#9776; <!-- simbol tiga garis -->
+  </button>
+</nav>
+
+<!-- Dropdown menu (hanya HP) -->
+<div id="menu" class="hidden bg-gray-800 text-white p-4 space-y-2 md:hidden">
+    <a href="beranda.html" class="hover:text-pink-400">Beranda</a>
+    <a href="index.html#tentang" class="hover:text-pink-400">Tentang</a>
+    <a href="index.html#skills" class="hover:text-pink-400">Skill</a>
+    <a href="index.html#portofolio" class="hover:text-pink-400">Portofolio</a>
+    <a href="tugas.html" class="hover:text-pink-400">Tugas</a>
+    <a href="index.html#contact" class="hover:text-pink-400">Kontak</a>
+</div>
+
+
+  <main class="max-w-xl mx-auto mt-28 p-6 bg-pink-700/70 rounded-lg">
+  <h2 class="text-2xl font-bold text-center mb-6">📐 Kalkulator Bangun Datar</h2>
+
+    <label class="block mb-2">Pilih Bangun:</label>
+    <select id="bangun" class="w-full p-2 rounded-lg text-black mb-4">
+      <option value="">-- Pilih --</option>
+      <option value="persegi">Persegi</option>
+      <option value="persegiPanjang">Persegi Panjang</option>
+      <option value="segitiga">Segitiga</option>
+      <option value="lingkaran">Lingkaran</option>
+      <option value="belahKetupat">Belah Ketupat</option>
+    </select>
+
+    <div id="rumus" class="mb-4 font-semibold"></div>
+    <div id="inputan" class="space-y-2"></div>
+
+    <button id="hitung" class="bg-purple-600 px-4 py-2 rounded-lg font-bold w-full mt-4">Hitung</button>
+    <p id="hasil" class="mt-4 text-lg font-bold"></p>
+  </main>
+
+  <footer class="text-center text-gray-300 mt-10 py-4">
+    © 2025 Kadek Rista Dwi Purnami
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

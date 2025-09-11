@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Portofolio Rista</title>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-pink-800 text-white">
+
+
+<!-- ========== NAVBAR ========== -->
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+  <!-- Logo -->
+  <div class="text-xl font-bold">⚡ Portofolio</div>
+
+  <!-- Menu (desktop, default muncul kalau layar md ke atas) -->
+  <ul class="hidden md:flex space-x-8">
+    <li><a href="beranda.html" class="hover:text-pink-400">Beranda</a></li>
+    <li><a href="#about" class="hover:text-pink-400">Tentang</a></li>
+    <li><a href="#skills" class="hover:text-pink-400">Skill</a></li>
+    <li><a href="#portofolio" class="hover:text-pink-400">Portofolio</a></li>
+    <li><a href="tugas.html" class="hover:text-pink-400">Tugas</a></li>
+    <li><a href="#contact" class="hover:text-pink-400">Kontak</a></li>
+  </ul>
+
+  <!-- Tombol hamburger (hanya muncul di HP) -->
+  <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+    &#9776; <!-- simbol tiga garis -->
+  </button>
+</nav>
+
+<!-- Dropdown menu (hanya HP) -->
+<div id="menu" class="hidden bg-gray-800 text-white p-4 space-y-2 md:hidden">
+    <a href="beranda.html" class="hover:text-pink-400">Beranda</a>
+    <a href="index.html#tentang" class="hover:text-pink-400">Tentang</a>
+    <a href="index.html#skills" class="hover:text-pink-400">Skill</a>
+    <a href="index.html#portofolio" class="hover:text-pink-400">Portofolio</a>
+    <a href="tugas.html" class="hover:text-pink-400">Tugas</a>
+    <a href="index.html#contact" class="hover:text-pink-400">Kontak</a>
+</div>
+  <main class="max-w-5xl mx-auto p-6 pt-24">
+
+
+<!-- About -->
+<section id="about" class="mt-16 flex flex-col items-center text-center">
+
+  <!-- Foto nyatu sama background -->
+  <img src="foto.png" 
+       alt="Foto Profil" 
+       class="w-60 h-72 object-cover rounded-xl mb-6">
+
+  <!-- Kotak isi teks -->
+  <div class="bg-pink-800 text-white p-6 rounded-2xl shadow-md max-w-4xl mx-auto mt-2 transition transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50">
+    <p>
+    Saya mahasiswa Ilmu Komputer yang berpengalaman dalam project berbasis web, UI/UX, dan aplikasi sederhana. 
+    Beberapa karya saya bisa dilihat langsung pada portofolio ini maupun GitHub. 
+    Saya selalu meningkatkan kemampuan melalui project nyata agar siap berkontribusi di dunia teknologi. <br><br> Selain itu, saya memiliki ketertarikan besar pada bidang <strong>pengembangan perangkat lunak</strong>, 
+    mulai dari pembuatan antarmuka yang menarik dan mudah digunakan hingga perancangan sistem backend yang efisien. 
+    Dengan bekal pengalaman menggunakan berbagai bahasa pemrograman dan tools modern, 
+    saya berusaha untuk terus mengasah kemampuan problem solving, berpikir kritis, serta kerja sama tim. 
+    Ke depan, saya ingin berkontribusi lebih luas dengan mengembangkan aplikasi inovatif 
+    yang tidak hanya bermanfaat bagi pengguna, tetapi juga berdampak positif pada masyarakat.
+    </p>
+
+</section>
+
+  <!-- Skills -->
+  <section id="skills" class="mt-16 bg-gradient-to-r from-pink-700 to-pink-900 p-6 rounded-xl">
+    <h2 class="text-center text-2xl font-bold mb-6">⚒️ Skill</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Frontend -->
+      <div class="bg-white/20 p-4 rounded-lg transition transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50">
+        <h3 class="font-bold mb-4 text-lg text-center">Frontend Development</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>Python</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>C++</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>HTML</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>CSS</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>JavaScript</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+          <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" class="w-10 h-10" /> <!--logo dari vectorlogo.zone-->
+          <span>Tailwind</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="bg-white/20 p-4 rounded-lg transition transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50">
+        <h3 class="font-bold mb-4 text-lg text-center">Backend</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>Java</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>MySQL</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>PHP Dasar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="bg-white/20 p-4 rounded-lg transition transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50">
+        <h3 class="font-bold mb-4 text-lg text-center">Tools & Lainnya</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>GitHub</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>Figma</span>
+          </div>
+          <div class="flex flex-col items-center bg-white/10 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/000000/networking-manager.png" class="w-10 h-10" /> <!--logo dariDevicon CDN-->
+            <span>Packet Tracer</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+    <!-- Portfolio -->
+    <section id="portofolio" class="mt-16">
+      <h2 class="text-center text-2xl font-bold mb-6">📂 Portofolio</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        
+        <div class="bg-pink-700/80 p-4 rounded-lg text-center">
+          <h3 class="font-semibold">Website Portfolio</h3>
+          <a href="file:///C:/Users/rista/Downloads/index.html.html" target="_blank" class="text-cyan-300 hover:underline">Lihat Project</a>
+        </div>
+
+        <div class="bg-pink-700/80 p-4 rounded-lg text-center">
+          <h3 class="font-semibold">MERANCANG MEDIA INFORMASI WISATA (UI/UX)</h3>
+          <p class="text-sm mb-2">Studi Kasus Taman Ujung Sukasada</p>
+          <a href="#" class="text-cyan-300 hover:underline">Lihat Project</a>
+        </div>
+
+        <div class="bg-pink-700/80 p-4 rounded-lg text-center">
+          <h3 class="font-semibold">SiRuKa</h3>
+          <p class="text-sm mb-2">Reservasi Ruangan Kampus (Java OOP)</p>
+          <a href="#" class="text-cyan-300 hover:underline">Lihat Project</a>
+        </div>
+
+        <div class="bg-pink-700/80 p-4 rounded-lg text-center">
+          <h3 class="font-semibold">Kalkulator Bangun Datar</h3>
+          <p class="text-sm mb-2">Javascript</p>
+          <a href="tugas.html" class="bg-pink-600 px-3 py-1 rounded-lg text-white hover:bg-pink-500">Lihat Tugas</a>
+        </div>
+
+        <div class="bg-pink-700/80 p-4 rounded-lg text-center">
+          <h3 class="font-semibold">F-Maps</h3>
+          <p class="text-sm mb-2">Food Maps (Figma, UI/UX)</p>
+          <a href="#" class="text-cyan-300 hover:underline">Lihat Project</a>
+        </div>
+
+        <!-- Kolom tambah project -->
+        <div class="bg-pink-600/40 p-4 rounded-lg text-center border-2 border-dashed border-pink-400 hover:bg-pink-600/60 cursor-pointer">
+          <p class="text-lg font-semibold">+ Project yang akan datang!</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="mt-16">
+      <h2 class="text-center text-2xl font-bold mb-6">✉️ Kontak</h2>
+      <form id="contactForm" class="space-y-4">
+        <input type="text" name="name" placeholder="Nama Anda" required class="w-full p-2 rounded-lg text-black">
+        <input type="email" name="email" placeholder="Email Anda" required class="w-full p-2 rounded-lg text-black">
+        <textarea name="message" placeholder="Pesan Anda..." required class="w-full p-2 rounded-lg text-black"></textarea>
+        <div class="flex gap-4">
+          <button class="bg-purple-600 px-4 py-2 rounded-lg font-bold" type="submit">Kirim</button>
+          <button class="bg-pink-600 px-4 py-2 rounded-lg font-bold" type="button" id="copyEmail">Salin Email</button>
+        </div>
+        <span id="copyState" class="text-sm text-green-300"></span>
+      </form>
+      <p class="mt-4">Email: <a href="mailto:ristadwipurn@gmail.com" class="text-cyan-300">ristadwipurn@gmail.com</a></p>
+      <div class="mt-4 space-x-3">
+        <a href="https://github.com/KadekRistaDwipurnamii" target="_blank" class="bg-pink-600 px-3 py-1 rounded-full">GitHub</a>
+        <a href="https://www.instagram.com/sluckygurl/" target="_blank" class="bg-pink-600 px-3 py-1 rounded-full">Instagram</a>
+        <a href="https://www.linkedin.com/in/ristadwipurn/" target="_blank" class="bg-pink-600 px-3 py-1 rounded-full">LinkedIn</a>
+        <a href="https://wa.me/6289508685114" target="_blank" class="bg-pink-600 px-3 py-1 rounded-full">WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-gray-300 mt-10 py-4">
+    © 2025 Kadek Rista Dwi Purnami
+  </footer>
+
+  <script src="script.js"></script>
+    <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
