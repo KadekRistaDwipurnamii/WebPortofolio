@@ -29,17 +29,18 @@
       &#9776;
     </button>
   </div>
+
+  <!-- Dropdown menu (HP) -->
+  <div id="menu" class="hidden absolute top-full left-0 w-full bg-gray-800 text-white p-4 space-y-2 md:hidden z-50">
+    <a href="#hero" class="block hover:text-pink-400">Home</a>
+    <a href="#about" class="block hover:text-pink-400">Tentang</a>
+    <a href="#skills" class="block hover:text-pink-400">Skill</a>
+    <a href="#portofolio" class="block hover:text-pink-400">Portofolio</a>
+    <a href="tugas.html" class="block hover:text-pink-400">Tugas</a>
+    <a href="#contact" class="block hover:text-pink-400">Kontak</a>
+  </div>
 </nav>
 
-<!-- Dropdown menu (HP) -->
-<div id="menu" class="hidden absolute top-16 left-0 w-full bg-gray-800 text-white p-4 space-y-2 md:hidden z-40">
-  <a href="#hero" class="block hover:text-pink-400">Home</a>
-  <a href="#about" class="block hover:text-pink-400">Tentang</a>
-  <a href="#skills" class="block hover:text-pink-400">Skill</a>
-  <a href="#portofolio" class="block hover:text-pink-400">Portofolio</a>
-  <a href="tugas.html" class="block hover:text-pink-400">Tugas</a>
-  <a href="#contact" class="block hover:text-pink-400">Kontak</a>
-</div>
 
 <main class="max-w-6xl mx-auto p-6 pt-24">
 
@@ -260,11 +261,18 @@
   const btn = document.getElementById("menu-btn");
   const menu = document.getElementById("menu");
 
-    if (btn && menu) {
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // Tutup menu saat klik link di dalamnya
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.add("hidden");
       });
-    }
+    });
+  }
 
     // dynamic hero text
     const roles = ["Computer Science Student", "Web Developer", "UI/UX Designer"];
