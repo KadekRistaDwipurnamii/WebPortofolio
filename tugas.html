@@ -9,37 +9,34 @@
 <body class="bg-gradient-to-b from-gray-900 to-pink-800 text-white">
 
 <!-- ========== NAVBAR ========== -->
-<!-- Navbar -->
 <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 text-white shadow-lg">
   <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-  <!-- Logo -->
-  <div class="text-xl font-bold">⚡ Portofolio</div>
+    <div class="text-xl font-bold">⚡ Portofolio</div>
 
-  <!-- Menu (desktop, default muncul kalau layar md ke atas) -->
-  <ul class="hidden md:flex space-x-8">
-    <li><a href="index.html#hero" class="hover:text-pink-400">Home</a></li>
-    <li><a href="index.html#about" class="hover:text-pink-400">Tentang</a></li>
-    <li><a href="indek.html#skills" class="hover:text-pink-400">Skill</a></li>
-    <li><a href="index.html#portofolio" class="hover:text-pink-400">Portofolio</a></li>
-    <li><a href="tugas.html" class="hover:text-pink-400">Tugas</a></li>
-    <li><a href="index.html#contact" class="hover:text-pink-400">Kontak</a></li>
-  </ul>
+    <!-- Menu (desktop) -->
+    <ul class="hidden md:flex space-x-8">
+      <li><a href="index.html#hero" class="hover:text-pink-400">Home</a></li>
+      <li><a href="index.html#about" class="hover:text-pink-400">Tentang</a></li>
+      <li><a href="index.html#skills" class="hover:text-pink-400">Skill</a></li>
+      <li><a href="index.html#portofolio" class="hover:text-pink-400">Portofolio</a></li>
+      <li><a href="tugas.html" class="hover:text-pink-400">Tugas</a></li>
+      <li><a href="index.html#contact" class="hover:text-pink-400">Kontak</a></li>
+    </ul>
 
-  <!-- Tombol hamburger (hanya muncul di HP) -->
-  <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
-    &#9776; <!-- simbol tiga garis -->
-  </button>
+  <!-- Hamburger -->
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none p-2">&#9776;</button>
+  </div>
+
+  <!-- Dropdown menu HP -->
+  <div id="menu" class="hidden absolute top-full left-0 w-full bg-gray-800 text-white p-4 space-y-2 md:hidden z-50">
+    <a href="index.html#hero" class="block hover:text-pink-400">Home</a>
+    <a href="index.html#about" class="block hover:text-pink-400">Tentang</a>
+    <a href="index.html#skills" class="block hover:text-pink-400">Skill</a>
+    <a href="index.html#portofolio" class="block hover:text-pink-400">Portofolio</a>
+    <a href="tugas.html" class="block hover:text-pink-400">Tugas</a>
+    <a href="index.html#contact" class="block hover:text-pink-400">Kontak</a>
+  </div>
 </nav>
-
-<!-- Dropdown menu (hanya HP) -->
-<div id="menu" class="hidden bg-gray-800 text-white p-4 space-y-2 md:hidden">
-    <a href="index.html#hero" class="hover:text-pink-400">Home</a>
-    <a href="index.html#tentang" class="hover:text-pink-400">Tentang</a>
-    <a href="index.html#skills" class="hover:text-pink-400">Skill</a>
-    <a href="index.html#portofolio" class="hover:text-pink-400">Portofolio</a>
-    <a href="tugas.html" class="hover:text-pink-400">Tugas</a>
-    <a href="index.html#contact" class="hover:text-pink-400">Kontak</a>
-</div>
 
 
   <main class="max-w-xl mx-auto mt-28 p-6 bg-pink-700/70 rounded-lg">
@@ -67,5 +64,26 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    if (btn && menu) {
+      // Toggle menu saat hamburger diklik
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Tutup menu saat klik link di dalam menu
+      menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
