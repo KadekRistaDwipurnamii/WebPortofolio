@@ -24,13 +24,11 @@
       <li><a href="#contact" class="hover:text-pink-400">Kontak</a></li>
     </ul>
 
-    <!-- Hamburger -->
-    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none p-2">
-      &#9776;
-    </button>
+  <!-- Hamburger -->
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none p-2">&#9776;</button>
   </div>
 
-  <!-- Dropdown menu (HP) -->
+  <!-- Dropdown menu HP -->
   <div id="menu" class="hidden absolute top-full left-0 w-full bg-gray-800 text-white p-4 space-y-2 md:hidden z-50">
     <a href="#hero" class="block hover:text-pink-400">Home</a>
     <a href="#about" class="block hover:text-pink-400">Tentang</a>
@@ -258,21 +256,25 @@
   </footer>
 
   <script>
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("menu");
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
 
-  if (btn && menu) {
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-
-    // Tutup menu saat klik link di dalamnya
-    menu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.add("hidden");
+    if (btn && menu) {
+      // Toggle menu saat hamburger diklik
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
       });
-    });
-  }
+
+      // Tutup menu saat klik link di dalam menu
+      menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
+      });
+    }
+  });
+
 
     // dynamic hero text
     const roles = ["Computer Science Student", "Web Developer", "UI/UX Designer"];
